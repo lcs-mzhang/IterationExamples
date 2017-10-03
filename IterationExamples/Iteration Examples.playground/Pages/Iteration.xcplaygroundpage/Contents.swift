@@ -4,14 +4,14 @@ import Cocoa
 import PlaygroundSupport
 
 // Create canvas
-let canvas = Canvas(width: 300, height: 400)
+let canvas = Canvas(width: 360, height: 500)
 
 canvas.drawShapesWithBorders = false
 
-for i in stride(from: 0, to: 500, by: 50)
+for i in stride(from: 0, to: 360, by: 1)
     {
-        canvas.fillColor = Color(hue: 0, saturation: 100, brightness: i/5, alpha: 100)
-        canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: i, width: canvas.width, height: 100)
+        canvas.fillColor = Color(hue: i, saturation: 100, brightness: 100, alpha: 100)
+        canvas.drawRectangle(bottomLeftX: i, bottomLeftY: 0, width: i, height: canvas.height)
     }
 //: **NOTE:** Output will show up in the Debug area.
 //:
