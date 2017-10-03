@@ -3,18 +3,6 @@
 //: The following two statements are required to make the playground run. Please do not remove.
 import Cocoa
 import PlaygroundSupport
-//: NOTE: Parts of this page are adapted from [The Swift Programming Language Guide - Control Flow](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/ControlFlow.html#//apple_ref/doc/uid/TP40014097-CH9-ID120).
-/*:
- ## For-In Loops
- ### Basic For-In Loops
- You use the *for-in* loop to iterate over ranges of numbers.
- Here is a simple loop that adds all the numbers from 1 to 4.
- */
-var sum = 0
-for value in 1...4 {
-    sum = sum + value
-}
-sum         // equals 10 at this point
 
 /*:
  ### Skipping values in a range
@@ -27,8 +15,7 @@ sum         // equals 10 at this point
 // Create canvas
 let canvas = Canvas(width: 300, height: 400)
 
-// Line width
-canvas.defaultLineWidth = 5
+canvas.drawShapesWithBorders = false
 
 // Draw the "rungs" of a ladder
 for y in stride(from: 0, through: 400, by: 50) {
