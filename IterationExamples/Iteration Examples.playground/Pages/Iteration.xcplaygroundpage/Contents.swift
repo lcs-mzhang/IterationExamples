@@ -4,15 +4,40 @@ import Cocoa
 import PlaygroundSupport
 
 // Create canvas
-let canvas = Canvas(width: 360, height: 500)
+let canvas = Canvas(width: 360, height: 360)
 
 canvas.drawShapesWithBorders = false
 
-for i in stride(from: 0, to: 360, by: 1)
-    {
-        canvas.fillColor = Color(hue: i, saturation: 100, brightness: 100, alpha: 100)
-        canvas.drawRectangle(bottomLeftX: i, bottomLeftY: 0, width: i, height: canvas.height)
-    }
+for i in stride(from: 0, to: 360, by: 60)
+{
+    canvas.fillColor = Color(hue: 0, saturation: i/6, brightness: 100, alpha: 100)
+    canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: i, width: 60, height: 60)
+}
+for i in stride(from: 0, to: 360, by: 60)
+{
+    canvas.fillColor = Color(hue: 60, saturation: i/6, brightness: 100, alpha: 100)
+    canvas.drawRectangle(bottomLeftX: 0+60, bottomLeftY: i, width: 60, height: 60)
+}
+for i in stride(from: 0, to: 360, by: 60)
+{
+    canvas.fillColor = Color(hue: 120, saturation: i/6, brightness: 100, alpha: 100)
+    canvas.drawRectangle(bottomLeftX: 0+120, bottomLeftY: i, width: 60, height: 60)
+}
+for i in stride(from: 0, to: 360, by: 60)
+{
+    canvas.fillColor = Color(hue: 180, saturation: i/6, brightness: 100, alpha: 100)
+    canvas.drawRectangle(bottomLeftX: 0+180, bottomLeftY: i, width: 60, height: 60)
+}
+for i in stride(from: 0, to: 360, by: 60)
+{
+    canvas.fillColor = Color(hue: 240, saturation: i/6, brightness: 100, alpha: 100)
+    canvas.drawRectangle(bottomLeftX: 0+240, bottomLeftY: i, width: 60, height: 60)
+}
+for i in stride(from: 0, to: 360, by: 60)
+{
+    canvas.fillColor = Color(hue: 300, saturation: i/6, brightness: 100, alpha: 100)
+    canvas.drawRectangle(bottomLeftX: 0+300, bottomLeftY: i, width: 60, height: 60)
+}
 //: **NOTE:** Output will show up in the Debug area.
 //:
 //: If you don't see this, press **Command-Shift-Y**.
