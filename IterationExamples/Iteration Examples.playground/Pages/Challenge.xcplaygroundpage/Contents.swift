@@ -15,12 +15,23 @@ import PlaygroundSupport
 let canvas = Canvas(width: 300, height: 300)
 
 // Below this line, try combining a loop and four statements that draw lines to generate the goal
-for i in stride(from: 0, to: 300, by: 20)
+
+//for i in stride(from: 0, to: 300, by: 20)
+//{
+//    canvas.drawLine(fromX: i, fromY: 0, toX: 300, toY: i)
+//    canvas.drawLine(fromX: 0, fromY: i, toX: i, toY: 300)
+//    canvas.drawLine(fromX: 300-i, fromY: 300, toX: 300, toY: i)
+//    canvas.drawLine(fromX: 300-i, fromY: 0, toX: 0, toY: i)
+//}
+
+var numberside = 8
+
+canvas.translate(byX: 125, byY: 100)
+for _ in 1...numberside
 {
-    canvas.drawLine(fromX: i, fromY: 0, toX: 300, toY: i)
-    canvas.drawLine(fromX: 0, fromY: i, toX: i, toY: 300)
-    canvas.drawLine(fromX: 300-i, fromY: 300, toX: 300, toY: i)
-    canvas.drawLine(fromX: 300-i, fromY: 0, toX: 0, toY: i)
+    canvas.drawLine(fromX: 0, fromY: 0, toX: 50, toY: 0)
+    canvas.translate(byX: 50, byY: 0)
+    canvas.rotate(by: Degrees(360/numberside))
 }
 /*:
  ## Template code
