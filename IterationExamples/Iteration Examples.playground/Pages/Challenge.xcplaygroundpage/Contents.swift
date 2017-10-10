@@ -24,15 +24,18 @@ let canvas = Canvas(width: 300, height: 300)
 //    canvas.drawLine(fromX: 300-i, fromY: 0, toX: 0, toY: i)
 //}
 
+//Plug in number of sides and length of each side
 var numberside = 8
+var linelength = 50
 
-canvas.translate(byX: canvas.width/2, byY: canvas.height/2)
+canvas.translate(byX: 100, byY: 100)
 for _ in 1...numberside
 {
-    canvas.drawLine(fromX: 0, fromY: 0, toX: 50, toY: 0)
-    canvas.translate(byX: 50, byY: 0)
+    canvas.drawLine(fromX: 0, fromY: 0, toX: linelength, toY: 0)
+    canvas.translate(byX: linelength, byY: 0)
     canvas.rotate(by: Degrees(360/numberside))
 }
+
 /*:
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
