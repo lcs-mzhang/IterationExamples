@@ -26,7 +26,7 @@ let canvas = Canvas(width: 300, height: 300)
 
 var numberside = 8
 
-canvas.translate(byX: 125, byY: 100)
+canvas.translate(byX: canvas.width/2, byY: canvas.height/2)
 for _ in 1...numberside
 {
     canvas.drawLine(fromX: 0, fromY: 0, toX: 50, toY: 0)
