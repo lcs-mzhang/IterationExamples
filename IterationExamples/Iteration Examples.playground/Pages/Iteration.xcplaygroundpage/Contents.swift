@@ -43,7 +43,7 @@ for x in stride(from: 0, to: 360, by: 60)
 {
     for i in stride(from: 0, to: 360, by: 60)
     {
-        canvas.fillColor = Color(hue: x, saturation: i/6, brightness: 100, alpha: 100)
+        canvas.fillColor = Color(hue: x, saturation: i/6+15, brightness: 100, alpha: 100)
         canvas.drawRectangle(bottomLeftX: x, bottomLeftY: i, width: 60, height: 60)
     }
 }
