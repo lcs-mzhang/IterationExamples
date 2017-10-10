@@ -28,14 +28,21 @@ let canvas = Canvas(width: 300, height: 300)
 var numberside = 8
 var linelength = 50
 
-canvas.translate(byX: 100, byY: 100)
+//canvas.translate(byX: 150, byY: 150)
+//for _ in 1...numberside
+//{
+//    canvas.drawLine(fromX: 0, fromY: 0, toX: linelength, toY: 0)
+//    canvas.translate(byX: linelength, byY: 0)
+//    canvas.rotate(by: Degrees(360/numberside))
+//}
+
+
+canvas.translate(byX: 150, byY: 150)
 for _ in 1...numberside
 {
-    canvas.drawLine(fromX: 0, fromY: 0, toX: linelength, toY: 0)
-    canvas.translate(byX: linelength, byY: 0)
+    canvas.drawLine(fromX: -linelength, fromY: 0, toX: -linelength, toY: linelength)
     canvas.rotate(by: Degrees(360/numberside))
 }
-
 /*:
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
