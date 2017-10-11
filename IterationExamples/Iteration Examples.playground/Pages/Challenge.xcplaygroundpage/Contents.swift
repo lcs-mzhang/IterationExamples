@@ -25,7 +25,7 @@ let canvas = Canvas(width: 300, height: 300)
 //}
 
 //Plug in number of sides and length of each side
-var numberside = 8
+var numberside = 12
 var linelength = 50
 
 //canvas.translate(byX: 150, byY: 150)
@@ -37,10 +37,17 @@ var linelength = 50
 //}
 
 
+//canvas.translate(byX: 150, byY: 150)
+//for _ in 1...numberside
+//{
+//    canvas.drawLine(fromX: -linelength, fromY: 0, toX: -linelength, toY: linelength)
+//    canvas.rotate(by: Degrees(360/numberside))
+//}
+
 canvas.translate(byX: 150, byY: 150)
 for _ in 1...numberside
 {
-    canvas.drawLine(fromX: -linelength, fromY: 0, toX: -linelength, toY: linelength)
+    canvas.drawLine(fromX: 0, fromY: 0, toX: 0, toY: linelength)
     canvas.rotate(by: Degrees(360/numberside))
 }
 /*:
