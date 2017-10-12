@@ -25,9 +25,10 @@ let canvas = Canvas(width: 300, height: 300)
 //}
 
 //Plug in number of sides and length of each side
-var numberside = 12
-var linelength = 50
 
+//var numberside = 10
+//var linelength = 50
+//
 //canvas.translate(byX: 150, byY: 150)
 //for _ in 1...numberside
 //{
@@ -44,11 +45,22 @@ var linelength = 50
 //    canvas.rotate(by: Degrees(360/numberside))
 //}
 
-canvas.translate(byX: 150, byY: 150)
-for _ in 1...numberside
+//canvas.translate(byX: 150, byY: 150)
+//for _ in 1...numberside
+//{
+//    canvas.drawLine(fromX: 0, fromY: 0, toX: 0, toY: linelength)
+//    canvas.rotate(by: Degrees(360/numberside))
+//}
+
+canvas.translate(byX: 0, byY: 60)
+for _ in 1...4
 {
-    canvas.drawLine(fromX: 0, fromY: 0, toX: 0, toY: linelength)
-    canvas.rotate(by: Degrees(360/numberside))
+    for _ in 1...4
+    {
+        canvas.translate(byX: 60, byY: 0)
+        canvas.drawEllipse(centreX: 0, centreY: 0, width: 25, height: 25)
+    }
+    canvas.translate(byX: -240, byY: 60)
 }
 /*:
  ## Template code
