@@ -52,15 +52,24 @@ let canvas = Canvas(width: 300, height: 300)
 //    canvas.rotate(by: Degrees(360/numberside))
 //}
 
-canvas.translate(byX: 0, byY: 60)
-for _ in 1...4
+//canvas.translate(byX: 0, byY: 60)
+//for _ in 1...4
+//{
+//    for _ in 1...4
+//    {
+//        canvas.translate(byX: 60, byY: 0)
+//        canvas.drawEllipse(centreX: 0, centreY: 0, width: 25, height: 25)
+//    }
+//    canvas.translate(byX: -240, byY: 60)
+//}
+
+canvas.translate(byX: 25, byY: 25)
+for x in stride(from: 0, to: 300, by: 50)
 {
-    for _ in 1...4
+    for y in stride(from: 0, to: 300, by:50)
     {
-        canvas.translate(byX: 60, byY: 0)
-        canvas.drawEllipse(centreX: 0, centreY: 0, width: 25, height: 25)
+        canvas.drawEllipse(centreX: x, centreY: y, width: 10, height: 10)
     }
-    canvas.translate(byX: -240, byY: 60)
 }
 /*:
  ## Template code
