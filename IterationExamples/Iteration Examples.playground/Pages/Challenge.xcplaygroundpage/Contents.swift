@@ -63,13 +63,33 @@ let canvas = Canvas(width: 300, height: 300)
 //    canvas.translate(byX: -240, byY: 60)
 //}
 
-canvas.translate(byX: 25, byY: 25)
-for x in stride(from: 0, to: 300, by: 50)
+//canvas.translate(byX: 25, byY: 25)
+//for x in stride(from: 0, to: 300, by: 50)
+//{
+//    for y in stride(from: 0, to: 300, by:50)
+//    {
+//        canvas.drawEllipse(centreX: x, centreY: y, width: 10, height: 10)
+//    }
+//}
+
+
+for _ in 1...6
 {
-    for y in stride(from: 0, to: 300, by:50)
+    for _ in 1...6
     {
-        canvas.drawEllipse(centreX: x, centreY: y, width: 10, height: 10)
+        let i = random(from: 1, toButNotIncluding: 3)
+        if i == 1
+        {
+            canvas.drawLine(fromX: 0, fromY: 0, toX: 50, toY: 50)
+            canvas.translate(byX: 50, byY: 0)
+        }
+        else
+        {
+            canvas.drawLine(fromX: 0, fromY: 50, toX: 50, toY: 0)
+            canvas.translate(byX: 50, byY: 0)
+        }
     }
+    canvas.translate(byX: -300, byY: 50)
 }
 /*:
  ## Template code
