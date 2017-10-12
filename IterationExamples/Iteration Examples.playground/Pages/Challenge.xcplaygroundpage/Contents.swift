@@ -12,7 +12,7 @@ import PlaygroundSupport
 //: ## Add your code below
 
 // Create canvas
-let canvas = Canvas(width: 500, height: 500)
+let canvas = Canvas(width: 1000, height: 1000)
 
 // Below this line, try combining a loop and four statements that draw lines to generate the goal
 
