@@ -12,7 +12,7 @@ import PlaygroundSupport
 //: ## Add your code below
 
 // Create canvas
-let canvas = Canvas(width: 300, height: 300)
+let canvas = Canvas(width: 500, height: 500)
 
 // Below this line, try combining a loop and four statements that draw lines to generate the goal
 
@@ -28,7 +28,7 @@ let canvas = Canvas(width: 300, height: 300)
 
 //var numberside = 10
 //var linelength = 50
-//
+
 //canvas.translate(byX: 150, byY: 150)
 //for _ in 1...numberside
 //{
@@ -36,7 +36,6 @@ let canvas = Canvas(width: 300, height: 300)
 //    canvas.translate(byX: linelength, byY: 0)
 //    canvas.rotate(by: Degrees(360/numberside))
 //}
-
 
 //canvas.translate(byX: 150, byY: 150)
 //for _ in 1...numberside
@@ -72,25 +71,31 @@ let canvas = Canvas(width: 300, height: 300)
 //    }
 //}
 
+var linepercolumn = 50
+var lineperrow = 50
+var l = canvas.width/lineperrow
+var h = canvas.height/linepercolumn
 
-for _ in 1...6
+for _ in 1...linepercolumn
 {
-    for _ in 1...6
+    for _ in 1...lineperrow
     {
         let i = random(from: 1, toButNotIncluding: 3)
         if i == 1
         {
-            canvas.drawLine(fromX: 0, fromY: 0, toX: 50, toY: 50)
-            canvas.translate(byX: 50, byY: 0)
+            canvas.drawLine(fromX: 0, fromY: 0, toX:l, toY: h)
+            
         }
         else
         {
-            canvas.drawLine(fromX: 0, fromY: 50, toX: 50, toY: 0)
-            canvas.translate(byX: 50, byY: 0)
+            canvas.drawLine(fromX: 0, fromY: h, toX: l, toY: 0)
+           
         }
+         canvas.translate(byX: l, byY: 0)
     }
-    canvas.translate(byX: -300, byY: 50)
+canvas.translate(byX: -canvas.width, byY: h)
 }
+
 /*:
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
